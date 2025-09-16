@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "./",  // IMPORTANT: makes asset paths relative, fixes MIME errors on Netlify
+  base: "./",  // IMPORTANT: makes asset paths relative, fixes MIME errors on Netlify 
 });

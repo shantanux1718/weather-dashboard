@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base theme */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-slate-100 font-sans text-slate-800;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+}
+
+/* Reusable card + title */
+@layer components {
+  .card {
+    @apply p-5 bg-white rounded-2xl shadow-md transition-shadow;
+  }
+  .card:hover {
+    @apply shadow-lg;
+  }
+  .title {
+    @apply text-lg font-semibold mb-2 text-slate-900;
+  }
+}
+
+/* small tweaks for mobile charts */
+.recharts-wrapper {
+  min-height: 120px;
+}
+
+/* CSS variable for accent color (set inline in React when needed) */
+:root {
+  --accent: #0ea5e9;
+}
